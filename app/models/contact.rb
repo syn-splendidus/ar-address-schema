@@ -1,3 +1,13 @@
 require_relative '../../db/config'
 
-# implement your Contact model here
+class Contact
+
+  def name
+    first_name + " " + last_name
+  end
+
+  def area_code
+    phone_number.scan((\d{3})\1)
+  end 
+
+end
